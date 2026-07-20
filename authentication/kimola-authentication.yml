@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/Kimola/api
+docs: https://github.com/Kimola/api#authentication
+summary:
+  types: [http]
+  scheme: bearer
+  api_key_in: [header]
+  oauth2_flows: []
+  notes: >-
+    The Kimola API authenticates with an API key presented as an HTTP Bearer
+    token in the Authorization header (Authorization: Bearer <apiKey>). The API
+    key is obtained from the Kimola dashboard Account menu (and the Models page
+    for the Cognitive API). Although the Cognitive documentation describes the
+    service as a "JSON-based OAuth2 API", no OAuth2 authorization/token flows or
+    scopes are documented; access is a static per-account bearer key. Key
+    validation is cached server-side for performance.
+schemes:
+  - name: bearerAuth
+    type: http
+    scheme: bearer
+    location: header
+    header: Authorization
+    format: "Bearer <apiKey>"
+    key_source: Kimola dashboard Account menu / Models page
+    sources:
+      - https://github.com/Kimola/api
+      - https://github.com/Kimola/kimola-cognitive-api-documentation
+errors:
+  - status: 400
+    when: Authorization header missing or not in Bearer format
+  - status: 401
+    when: The provided API key is invalid
+  - status: 403
+    when: The key lacks access to the requested resource/model
