@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/Kimola/api
+packages:
+  - language: python
+    registry: pypi
+    name: kimola
+    version: 0.1.1
+    url: https://pypi.org/project/kimola/
+    install: pip install kimola
+    official: true
+    author: Kimola (developer@kimola.com)
+    description: A lightweight, user-friendly Python SDK for the Kimola API, closely aligned with the official documentation.
+  - language: javascript
+    registry: npm
+    name: "@kimola/api"
+    version: 0.1.1
+    url: https://www.npmjs.com/package/@kimola/api
+    install: npm install @kimola/api
+    official: true
+    maintainer: kimola
+    homepage: https://github.com/Kimola/api/tree/main/libraries/nodejs#readme
+    description: Node.js/TypeScript client for the Kimola API.
+  - language: csharp
+    registry: nuget
+    name: Kimola.Api
+    version: 0.1.1
+    url: https://www.nuget.org/packages/Kimola.Api
+    install: dotnet add package Kimola.Api
+    official: true
+    author: kimola101
+    description: A lightweight, dependency-free C# client for the Kimola API, targeting .NET 9.0 (presets, labels, predictions, queries, subscription usage).

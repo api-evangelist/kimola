@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: generated
+source: https://github.com/Kimola/api
+skills:
+  - file: kimola-classify-feedback.md
+    name: Classify customer feedback with a Kimola model
+    api: https://api.kimola.com/v1/cognitive
+    operations:
+      - "GET /v1/cognitive/Models"
+      - "GET /v1/cognitive/Models/{secret}/tags"
+      - "POST /v1/cognitive/Models/{secret}/tags"
+      - "GET /v1/cognitive/Models/{code}/{language}/tags"
+  - file: kimola-read-report-insights.md
+    name: Read research insights from a Kimola feed and report
+    api: https://api.kimola.com/v1
+    operations:
+      - "GET /v1/feeds"
+      - "GET /v1/feeds/{code}/reports"
+      - "GET /v1/reports/{code}/analyses"
+      - "GET /v1/reports/{code}/analyses/{slug}"

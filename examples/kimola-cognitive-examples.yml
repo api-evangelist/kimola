@@ -1,0 +1,44 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/Kimola/kimola-cognitive-api-documentation
+description: Verbatim request/response examples published in the Kimola Cognitive API documentation.
+examples:
+  - name: custom-model-prediction
+    method: GET
+    path: /v1/cognitive/Models/{secret}/tags
+    request: "curl -X GET 'https://api.kimola.com/v1/cognitive/Models/{secret}/tags?text=hello&strict=false' -H 'Authorization: Bearer {key}'"
+    response:
+      - {name: "...", probability: 0.8}
+      - {name: "...", probability: 0.11}
+      - {name: "...", probability: 0.04}
+  - name: custom-model-prediction-batch
+    method: POST
+    path: /v1/cognitive/Models/{secret}/tags
+    request: "curl -X POST 'https://api.kimola.com/v1/cognitive/Models/{secret}/tags' -H 'Authorization: Bearer {key}' -H 'Content-Type: application/json-patch+json' -d '[{\"id\":\"...\",\"text\":\"...\"}]'"
+    response:
+      - {id: "0", label: "Game Praise", probability: 0.96}
+      - {id: "1", label: "Feature & Design", probability: 0.48}
+  - name: prebuilt-model-prediction
+    method: GET
+    path: /v1/cognitive/Models/{code}/{language}/tags
+    request: "curl -X GET 'https://api.kimola.com/v1/cognitive/Models/{code}/en/tags?text=hello&strict=false' -H 'Authorization: Bearer {key}'"
+    response:
+      - {name: "Others", probability: 1}
+      - {name: "Pricing", probability: 0}
+      - {name: "Technical Issues", probability: 0}
+  - name: model-details
+    method: GET
+    path: /v1/cognitive/Models/{secret}
+    response:
+      isReady: true
+      id: "..."
+      language: en
+      languageName: English
+      name: "..."
+      category: "..."
+      algorithm: "..."
+      accuracy: 0.87
+      recordCount: 5049
+      trainedDate: "..."
+      modifiedDate: "..."
+      createdDate: "..."

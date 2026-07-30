@@ -1,0 +1,60 @@
+generated: '2026-07-19'
+method: derived
+source:
+  - https://github.com/Kimola/api
+  - https://github.com/Kimola/kimola-cognitive-api-documentation
+entities:
+  - name: Preset
+    key: key
+    description: Pre-trained AI model for classification and entity extraction.
+  - name: Label
+    description: A classification label/tag exposed by a Preset.
+  - name: Prediction
+    fields: [id, name, label, probability]
+    description: Tag result with probability returned by running text through a Preset or Model.
+  - name: Feed
+    key: code
+    description: Stream of customer feedback gathered around a topic, brand, or keyword.
+  - name: Report
+    key: code
+    description: Structured research output derived from a Feed (summaries, themes, insights).
+  - name: Analysis
+    key: slug
+    description: An individual analysis within a Report (e.g. summary, theme, persona).
+  - name: Query
+    description: Consumption/transaction record across classification, scraping, and tracking.
+  - name: Subscription
+    description: Account subscription with resource usage across billing periods.
+  - name: Model
+    key: secret
+    fields: [id, name, language, languageName, category, algorithm, accuracy, recordCount, isReady, isOwner, trainedDate, modifiedDate, createdDate]
+    description: Cognitive custom or pre-built classification model (Cognitive API).
+relationships:
+  - from: Feed
+    to: Report
+    type: has_many
+    via: /feeds/{code}/reports
+  - from: Report
+    to: Analysis
+    type: has_many
+    via: /reports/{code}/analyses
+  - from: Analysis
+    to: Report
+    type: belongs_to
+    via: code
+  - from: Preset
+    to: Label
+    type: has_many
+    via: /presets/{key}/labels
+  - from: Preset
+    to: Prediction
+    type: has_many
+    via: /presets/{key}/predictions
+  - from: Model
+    to: Prediction
+    type: has_many
+    via: /Models/{secret}/tags
+  - from: Subscription
+    to: Query
+    type: has_many
+    via: /queries

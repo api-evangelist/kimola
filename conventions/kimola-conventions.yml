@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/Kimola/api
+authentication:
+  style: http-bearer
+  header: Authorization
+  format: "Bearer <apiKey>"
+  ref: authentication/kimola-authentication.yml
+idempotency:
+  supported: false
+  notes: No idempotency key header/parameter is documented.
+pagination:
+  style: page-index
+  params:
+    page_index: pageIndex
+    page_size: pageSize
+  defaults:
+    pageIndex: 0
+    pageSize: 10
+  index_base: 0
+  notes: Zero-based page index; pageSize default 10 (maximum varies by endpoint).
+versioning:
+  style: uri-path
+  current: v1
+  ref: lifecycle/kimola-lifecycle.yml
+dates:
+  format: ISO 8601 (UTC)
+error_envelope:
+  format: plain-text / simple JSON message
+  rfc9457: false
+  ref: errors/kimola-error-codes.yml
+content_types:
+  request: [application/json, application/json-patch+json, application/x-www-form-urlencoded]
+  response: application/json
+  encoding: UTF-8
+batching:
+  supported: true
+  notes: >-
+    Prediction endpoints accept a JSON array of up to 100 items (id + text)
+    per POST request for batch classification.
+rate_limiting:
+  header_signal: false
+  model: query-consumption
+  notes: >-
+    No RateLimit headers are documented. Usage is metered as "queries"
+    consumed per operation across classification, tracking, and scraping;
+    aspect-based classification consumes 2 queries, standard classification 1.
+    Consumption is inspectable via /v1/queries and /v1/subscription/usage.

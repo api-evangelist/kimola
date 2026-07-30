@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/Kimola/api
+format: plain-text
+envelope: >-
+  Errors are returned with the HTTP status code and a plain-text (or simple
+  JSON) message body describing the condition. Responses are not RFC 9457
+  application/problem+json.
+errors:
+  - status: 400
+    condition: Authorization header is missing
+    message: You must provide an authorization header.
+  - status: 400
+    condition: Authorization header is not in Bearer token format
+    message: "You must provide a Bearer Token (Authorization: Bearer <apiKey>)"
+  - status: 401
+    condition: Invalid API key
+    message: The provided API key is invalid.
+  - status: 403
+    condition: Insufficient access to the requested resource or model
+    message: You are not allowed to access this model.
+  - status: 404
+    condition: Requested resource does not exist
+    message: "Report does not exist. / Feed does not exist. / Analysis does not exist."
+  - status: 406
+    condition: Query processing failure
+    message: "Couldn't get reports. / Couldn't get feeds. / Couldn't get analyses."

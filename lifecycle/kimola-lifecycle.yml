@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/Kimola/api
+versioning:
+  scheme: uri-path
+  current: v1
+  base_url: https://api.kimola.com/v1
+  docs: https://github.com/Kimola/api
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No formal deprecation or Sunset (RFC 8594) policy is documented.
+sla:
+  url: https://status.kimola.com/
+  uptime_target: null
+  notes: >-
+    No contractual uptime SLA is published. The status page reports observed
+    uptime (public API 100%, operational and AI services ~99.95%).
+status_page: https://status.kimola.com/
+status_page_provider: Better Stack
+status_components:
+  - kimola.com
+  - Operational Services (auth, CMS, SQL databases, in-memory cache)
+  - AI Services (LLM providers, vector/keyword indexes, data collection, report generation)
+  - API
+deprecated_operations: []

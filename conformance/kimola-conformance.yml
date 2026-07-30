@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: derived
+source: https://github.com/Kimola/api
+standards:
+  - id: http-bearer-auth
+    conforms: true
+    evidence: Authorization header uses the HTTP Bearer scheme (RFC 6750).
+  - id: oauth2
+    conforms: false
+    evidence: >-
+      Cognitive docs describe a "JSON-based OAuth2 API" but no OAuth2 flows,
+      authorization/token endpoints, or scopes are documented; auth is a static
+      per-account bearer API key.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors are plain-text messages, not application/problem+json.
+  - id: pagination
+    conforms: true
+    evidence: pageIndex/pageSize query parameters on list endpoints.
+  - id: iso8601-dates
+    conforms: true
+    evidence: Date parameters/values use ISO 8601 UTC.
+  - id: iso639-1-languages
+    conforms: true
+    evidence: Pre-built model prediction endpoints select result language via ISO 639-1 codes.
+  - id: json-api
+    conforms: false
+  - id: rest
+    conforms: true
+    evidence: Resource-oriented HTTPS endpoints (presets, reports, feeds, queries, models) with standard verbs.

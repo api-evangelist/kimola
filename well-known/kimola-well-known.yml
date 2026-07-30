@@ -1,0 +1,21 @@
+generated: '2026-07-19'
+method: searched
+source: probe of api.kimola.com and kimola.com /.well-known/
+notes: No .well-known discovery documents are published. All probes returned 404. Recorded for auditability; no WellKnown/SecurityTxt pointer emitted (nothing found).
+hosts:
+  - host: https://api.kimola.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://kimola.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404

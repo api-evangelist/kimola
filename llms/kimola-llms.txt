@@ -1,0 +1,35 @@
+# Kimola
+
+> Kimola turns customer feedback into market research. Its platform tracks feedback from social media, reviews, and uploads; analyzes it with AI to detect themes, sentiment, and patterns across 30+ languages; and generates insights such as executive summaries, customer personas, pain points, and journey maps. The public Kimola API exposes presets, reports, feeds, query consumption, and the Cognitive text-classification models.
+
+## APIs
+- [Kimola API](https://api.kimola.com/v1): REST API for presets (pre-trained classification/extraction models), reports, feeds, queries, and subscription usage. Bearer API-key auth.
+- [Kimola Cognitive API](https://api.kimola.com/v1/cognitive): Text-classification endpoints that run text against custom and pre-built models and return tags with probabilities (batch up to 100).
+
+## Documentation
+- [Kimola API documentation](https://github.com/Kimola/api): Official docs — authentication, resources, endpoints, examples.
+- [Kimola Cognitive API documentation](https://github.com/Kimola/kimola-cognitive-api-documentation): Cognitive model prediction endpoints.
+- [GitHub organization](https://github.com/Kimola)
+- [Support](https://kimola.com/support)
+- [Blog](https://kimola.com/blog)
+- [Pricing](https://kimola.com/pricing)
+- [Status](https://status.kimola.com/)
+
+## SDKs
+- [Python (PyPI)](https://pypi.org/project/kimola/): pip install kimola
+- [Node.js (npm)](https://www.npmjs.com/package/@kimola/api): npm install @kimola/api
+- [C# (NuGet)](https://www.nuget.org/packages/Kimola.Api): dotnet add package Kimola.Api
+
+## Authentication
+- HTTP Bearer token: `Authorization: Bearer <apiKey>`. API key obtained from the Kimola dashboard Account menu (Models page for the Cognitive API).
+
+## Endpoints (Kimola API v1)
+- GET /v1/presets ; GET /v1/presets/{key} ; GET /v1/presets/{key}/labels ; POST /v1/presets/{key}/predictions
+- GET /v1/reports ; GET /v1/reports/{code} ; GET /v1/reports/{code}/analyses ; GET /v1/reports/{code}/analyses/{slug}
+- GET /v1/feeds ; GET /v1/feeds/{code} ; GET /v1/feeds/{code}/reports
+- GET /v1/queries ; GET /v1/queries/statistics ; GET /v1/subscription/usage
+
+## Cognitive endpoints (v1/cognitive)
+- GET|POST /v1/cognitive/Models/{secret}/tags
+- GET|POST /v1/cognitive/Models/{code}/{language}/tags
+- GET /v1/cognitive/Models/{secret} ; GET /v1/cognitive/Models
