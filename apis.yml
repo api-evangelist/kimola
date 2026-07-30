@@ -1,7 +1,29 @@
 aid: kimola
 name: Kimola
-description: Kimola is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Kimola is a market research automation platform that turns customer feedback
+  into research insights. It tracks feedback from social media, reviews, and
+  direct uploads; analyzes it with AI to detect themes, sentiment, and patterns
+  across 30+ languages; and generates executive summaries, customer personas,
+  pain points, and journey maps. Kimola exposes a public REST API for presets
+  (pre-trained classification and entity-extraction models), reports, feedback
+  feeds, query consumption, and subscription usage, plus the Kimola Cognitive
+  API for running text through custom and pre-built classification models and
+  returning tagged predictions with probabilities. Official Python, Node.js, and
+  C# SDKs are published. Kimola is backed by 500 Global.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kimola.com/images/kimola-og.webp
 url: https://raw.githubusercontent.com/api-evangelist/kimola/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,15 +33,101 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Market Research
+- Customer Feedback
+- Text Analytics
+- Sentiment Analysis
+- Natural Language Processing
+- Consumer Insights
+- Machine Learning
+- Artificial Intelligence
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Kimola API
+  description: >-
+    REST API for presets (pre-trained classification and entity-extraction
+    models), research reports and their analyses, feedback feeds, query
+    consumption, and subscription usage. Authenticated with an HTTP Bearer API
+    key.
+  humanURL: https://github.com/Kimola/api
+  baseURL: https://api.kimola.com/v1
+  properties:
+  - type: Documentation
+    url: https://github.com/Kimola/api
+  - type: APIReference
+    url: https://github.com/Kimola/api
+- name: Kimola Cognitive API
+  description: >-
+    Text-classification API that runs text against custom and pre-built models
+    and returns matching tags with probabilities (batch up to 100 per request),
+    with multi-language results via ISO 639-1 codes.
+  humanURL: https://github.com/Kimola/kimola-cognitive-api-documentation
+  baseURL: https://api.kimola.com/v1/cognitive
+  properties:
+  - type: Documentation
+    url: https://github.com/Kimola/kimola-cognitive-api-documentation
+  - type: APIReference
+    url: https://github.com/Kimola/kimola-cognitive-api-documentation
 common:
+- type: DomainSecurity
+  url: security/kimola-domain-security.yml
 - type: Website
   url: https://kimola.com
+- type: Documentation
+  url: https://github.com/Kimola/api
+- type: APIReference
+  url: https://github.com/Kimola/api
+- type: GitHubOrganization
+  url: https://github.com/Kimola
+- type: Support
+  url: https://kimola.com/support
+- type: Blog
+  url: https://kimola.com/blog
+- type: Pricing
+  url: https://kimola.com/pricing
+- type: SignUp
+  url: https://kimola.com/sign-up
+- type: Login
+  url: https://kimola.com/sign-in
+- type: TermsOfService
+  url: https://kimola.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://kimola.com/privacy-policy
+- type: StatusPage
+  url: https://status.kimola.com/
+- type: Packages
+  url: packages/kimola-packages.yml
+- type: SDKs
+  url: packages/kimola-packages.yml
+- type: Authentication
+  url: authentication/kimola-authentication.yml
+- type: ErrorCatalog
+  url: errors/kimola-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/kimola-lifecycle.yml
+- type: Conventions
+  url: conventions/kimola-conventions.yml
+- type: Conformance
+  url: conformance/kimola-conformance.yml
+- type: DataModel
+  url: data-model/kimola-data-model.yml
+- type: Examples
+  url: examples/kimola-cognitive-examples.yml
+- type: MCPServer
+  url: mcp/kimola-mcp.yml
+- type: LLMsTxt
+  url: llms/kimola-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
