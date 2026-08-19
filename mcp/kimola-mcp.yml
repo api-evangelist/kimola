@@ -2,58 +2,62 @@ generated: '2026-07-19'
 method: derived
 status: candidate
 source: https://github.com/Kimola/api
-notes: >-
-  No official hosted or published Kimola MCP server was found (no
-  @modelcontextprotocol package, no docs reference, no registry entry). The
-  tools below are a candidate surface derived from the documented REST
-  endpoints so an MCP server could be generated; not an official Kimola product.
+notes: No official hosted or published Kimola MCP server was found (no @modelcontextprotocol package,
+  no docs reference, no registry entry). The tools below are a candidate surface derived from the documented
+  REST endpoints so an MCP server could be generated; not an official Kimola product.
 server:
   name: kimola
   transport: http
   url: null
 tools:
-  - name: list_presets
-    description: List available classification/extraction presets.
-    source_operation: "GET https://api.kimola.com/v1/presets"
-  - name: get_preset
-    description: Retrieve a preset by key.
-    source_operation: "GET https://api.kimola.com/v1/presets/{key}"
-  - name: get_preset_labels
-    description: List the labels a preset can return.
-    source_operation: "GET https://api.kimola.com/v1/presets/{key}/labels"
-  - name: run_preset_predictions
-    description: Classify one or more texts against a preset (batch up to 100).
-    source_operation: "POST https://api.kimola.com/v1/presets/{key}/predictions"
-  - name: list_reports
-    description: List research reports.
-    source_operation: "GET https://api.kimola.com/v1/reports"
-  - name: get_report
-    description: Retrieve a report by code.
-    source_operation: "GET https://api.kimola.com/v1/reports/{code}"
-  - name: get_report_analyses
-    description: List analyses within a report.
-    source_operation: "GET https://api.kimola.com/v1/reports/{code}/analyses"
-  - name: get_report_analysis
-    description: Retrieve a single analysis (and its data) from a report.
-    source_operation: "GET https://api.kimola.com/v1/reports/{code}/analyses/{slug}"
-  - name: list_feeds
-    description: List feedback feeds.
-    source_operation: "GET https://api.kimola.com/v1/feeds"
-  - name: get_feed_reports
-    description: List reports for a feed.
-    source_operation: "GET https://api.kimola.com/v1/feeds/{code}/reports"
-  - name: get_query_statistics
-    description: Retrieve query-consumption statistics.
-    source_operation: "GET https://api.kimola.com/v1/queries/statistics"
-  - name: get_subscription_usage
-    description: Retrieve subscription resource usage for the billing period.
-    source_operation: "GET https://api.kimola.com/v1/subscription/usage"
-  - name: classify_text_with_model
-    description: Classify text against a Cognitive custom model and return tags with probabilities.
-    source_operation: "GET https://api.kimola.com/v1/cognitive/Models/{secret}/tags"
-  - name: classify_text_with_prebuilt_model
-    description: Classify text against a pre-built Cognitive model in a chosen language.
-    source_operation: "GET https://api.kimola.com/v1/cognitive/Models/{code}/{language}/tags"
-  - name: list_models
-    description: List available Cognitive models.
-    source_operation: "GET https://api.kimola.com/v1/cognitive/Models"
+- name: list_presets
+  description: List available classification/extraction presets.
+  source_operation: GET https://api.kimola.com/v1/presets
+- name: get_preset
+  description: Retrieve a preset by key.
+  source_operation: GET https://api.kimola.com/v1/presets/{key}
+- name: get_preset_labels
+  description: List the labels a preset can return.
+  source_operation: GET https://api.kimola.com/v1/presets/{key}/labels
+- name: run_preset_predictions
+  description: Classify one or more texts against a preset (batch up to 100).
+  source_operation: POST https://api.kimola.com/v1/presets/{key}/predictions
+- name: list_reports
+  description: List research reports.
+  source_operation: GET https://api.kimola.com/v1/reports
+- name: get_report
+  description: Retrieve a report by code.
+  source_operation: GET https://api.kimola.com/v1/reports/{code}
+- name: get_report_analyses
+  description: List analyses within a report.
+  source_operation: GET https://api.kimola.com/v1/reports/{code}/analyses
+- name: get_report_analysis
+  description: Retrieve a single analysis (and its data) from a report.
+  source_operation: GET https://api.kimola.com/v1/reports/{code}/analyses/{slug}
+- name: list_feeds
+  description: List feedback feeds.
+  source_operation: GET https://api.kimola.com/v1/feeds
+- name: get_feed_reports
+  description: List reports for a feed.
+  source_operation: GET https://api.kimola.com/v1/feeds/{code}/reports
+- name: get_query_statistics
+  description: Retrieve query-consumption statistics.
+  source_operation: GET https://api.kimola.com/v1/queries/statistics
+- name: get_subscription_usage
+  description: Retrieve subscription resource usage for the billing period.
+  source_operation: GET https://api.kimola.com/v1/subscription/usage
+- name: classify_text_with_model
+  description: Classify text against a Cognitive custom model and return tags with probabilities.
+  source_operation: GET https://api.kimola.com/v1/cognitive/Models/{secret}/tags
+- name: classify_text_with_prebuilt_model
+  description: Classify text against a pre-built Cognitive model in a chosen language.
+  source_operation: GET https://api.kimola.com/v1/cognitive/Models/{code}/{language}/tags
+- name: list_models
+  description: List available Cognitive models.
+  source_operation: GET https://api.kimola.com/v1/cognitive/Models
+deployment:
+  mode: none
+  verified: derived
+  tools: 15
+  checked: '2026-08-12'
+  source: catalog MCP census
