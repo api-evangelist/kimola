@@ -11,6 +11,17 @@ description: >-
   API for running text through custom and pre-built classification models and
   returning tagged predictions with probabilities. Official Python, Node.js, and
   C# SDKs are published. Kimola is backed by 500 Global.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
