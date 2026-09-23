@@ -1,0 +1,29 @@
+# Front Door AI Index — kimola — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: kimola
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: kimola.com
+  final_host: kimola.com
+  ownership: own
+  owner: kimola
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 25
+  host_score: 25
+  density: 12.76
+  words: 1959
+  tiers:
+    agentic: 2
+    core: 21
+    model: 2
+  ambiguous: 1
+  top_terms:
+    AI: 20
+    GPT: 2
+    chatbot: 2
+    artificial intelligence: 1
+    intelligence: 1
