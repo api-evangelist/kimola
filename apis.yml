@@ -54,7 +54,7 @@ tags:
 - Sentiment Analysis
 - Natural Language Processing
 - Consumer Insights
-- Machine-Learning
+- Machine Learning
 - Artificial Intelligence
 tags_raw:
 - Company
@@ -66,6 +66,7 @@ tags_raw:
 - Consumer Insights
 - Machine Learning
 - Artificial Intelligence
+- Machine-Learning
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
