@@ -1,0 +1,57 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://kimola.com/pricing
+sources:
+- https://kimola.com/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: Monthly/Yearly toggle (Yearly Save up to 20%); queries counted per 500-character data row. Enterprise
+  is custom.
+plan_count: 5
+currency: USD
+plans:
+- name: Starter
+  price_text: Free always and forever
+  period: month
+  unit: queries
+  included_quota: 150 queries/month
+- name: Basic
+  price_text: $ 49 /month
+  price: 49
+  currency: USD
+  period: month
+  unit: queries
+  included_quota: 3,000 queries/month, 3 keywords, 5 links, 1 Custom AI Model
+- name: Standard
+  price_text: $ 179 /month
+  price: 179
+  currency: USD
+  period: month
+  unit: queries
+  included_quota: 12,000 queries/month, 10 keywords, 15 links, 3 Custom AI Model
+- name: Business
+  price_text: $ 359 /month
+  price: 359
+  currency: USD
+  period: month
+  unit: queries
+  included_quota: 30,000 queries/month, 15 keywords, 30 links, 5 Custom AI Model
+- name: Enterprise
+  price_text: Contact Sales
+  period: none
+  included_quota: 50,000+ queries
+rate_limit_statements:
+- 150 queries/month
+- 3,000 queries/month
+- 12,000 queries/month
+- 30,000 queries/month
