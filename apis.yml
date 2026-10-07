@@ -99,6 +99,8 @@ apis:
   - type: APIReference
     url: https://github.com/Kimola/kimola-cognitive-api-documentation
 common:
+- type: Plans
+  url: plans/kimola-plans-pricing.yml
 - type: DomainSecurity
   url: security/kimola-domain-security.yml
 - type: Website
