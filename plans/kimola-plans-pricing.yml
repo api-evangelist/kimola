@@ -55,3 +55,51 @@ rate_limit_statements:
 - 3,000 queries/month
 - 12,000 queries/month
 - 30,000 queries/month
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - metered
+  units:
+  - request
+  plans:
+  - name: Starter
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - request
+    periods:
+    - month
+  - name: Basic
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - request
+    periods:
+    - month
+  - name: Standard
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - request
+    periods:
+    - month
+  - name: Business
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - request
+    periods:
+    - month
+  - name: Enterprise
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods:
+    - none
