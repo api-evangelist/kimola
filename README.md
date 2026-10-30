@@ -64,6 +64,107 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Kimola is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Kimola is a market research automation platform that turns customer feedback into research insights. It tracks feedback from social media, reviews, and direct uploads; analyzes it with AI to detect themes, sentiment, and patterns across 30+ languages; and generates executive summaries, customer personas, pain points, and journey maps. Kimola exposes a public REST API for presets (pre-trained classification and entity-extraction models), reports, feedback feeds, query consumption, and subscription usage, plus the Kimola Cognitive API for running text through custom and pre-built classification models and returning tagged predictions with probabilities. Official Python, Node.js, and C# SDKs are published. Kimola is backed by 500 Global.
 
-Backed by: 500-global — https://kimola.com
+**Areas:** Company · Market Research · Customer Feedback · Text Analytics · Sentiment Analysis · Natural Language Processing · Consumer Insights · Machine Learning · Artificial Intelligence
+
+## Kimola on APIs.io
+
+Everything profiled for Kimola is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/kimola/](https://apis.io/providers/kimola/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Kimola API](https://apis.io/apis/kimola/kimola-api/) — REST API for presets (pre-trained classification and entity-extraction models), research reports and their analyses, feedback feeds, query consumption, and…
+- [Kimola Cognitive API](https://apis.io/apis/kimola/kimola-cognitive-api/) — Text-classification API that runs text against custom and pre-built models and returns matching tags with probabilities (batch up to 100 per request), with…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [kimola](https://apis.io/servers/kimola/kimola/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Kimola Authentication](https://apis.io/security/kimola/kimola-authentication/)
+- [Kimola Domain Security](https://apis.io/security/kimola/kimola-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Kimola Plans Pricing](https://apis.io/plans/kimola/kimola-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://kimola.com)
+- [Documentation](https://github.com/Kimola/api)
+- [API reference](https://github.com/Kimola/api)
+- [Pricing](https://kimola.com/pricing)
+- [Sign up](https://kimola.com/sign-up)
+- [Support](https://kimola.com/support)
+- [Blog](https://kimola.com/blog)
+- [Terms of service](https://kimola.com/terms-of-service)
+- [Privacy policy](https://kimola.com/privacy-policy)
+- [GitHub](https://github.com/Kimola)
+- [Status](https://status.kimola.com/)
+
+## API Evangelist rating
+
+**Kin Score 36.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 6.5 |
+| Contract governance | 4.5 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 44.6 |
+| Access clarity | 76.3 |
+
+**Agent readiness 7.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/kimola/](https://apis.io/providers/kimola/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Kimola: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/kimola/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
